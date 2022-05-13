@@ -1,5 +1,6 @@
 package com.ap.ap.services;
 
+import com.ap.ap.exception.UserNotFoundException;
 import com.ap.ap.models.Usuario;
 import com.ap.ap.repository.UsuarioRepo;
 import java.util.List;
@@ -23,17 +24,20 @@ public class UsuarioService {
     public Usuario addUser(Usuario usuario) {
         return usuarioRepo.save(usuario);
     }
-
     public List<Usuario> buscarUsuario() {
         return usuarioRepo.findAll();
     }
-
     public Usuario editarUsuario(Usuario usuario) {
-        return usuarioRepo.save(usuario);
+        return usuarioRepo.save(usuario); 
     }
 
     //Se declara sólo por tener todo declarado.
     public void borrarUsuario(Long id) {
         usuarioRepo.deleteById(id());
     }
-}
+    
+    public Usuario buscaUsuarioPorId(Long id){
+        return usuarioRepo.findById(id).orElseThrow(()-> new UserNotFoundException("Usuario no encontrado"));
+    }
+
+  }
