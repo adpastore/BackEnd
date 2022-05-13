@@ -57,6 +57,11 @@
 	  <artifactId>spring-data-jpa</artifactId>
 	  <version>2.6.4</version>
 	 </dependency>
+	 <dependency>
+	  <groupId>org.wildfly.swarm</groupId>
+	  <artifactId>bean-validation</artifactId>
+	  <version>1.0.0.Alpha6</version>
+	 </dependency>
 	</dependencies>
 
 	<build>
