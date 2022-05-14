@@ -2,6 +2,7 @@ package com.ap.ap.services;
 
 import com.ap.ap.models.Experiencia;
 import com.ap.ap.repository.ExperienciaRepo;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,8 +23,8 @@ public class ExperienciaService {
         return experienciaRepo.save(experiencia);
     }
     
-    public Experiencia buscarExperiencia(Experiencia experiencia){
-        return (Experiencia) experienciaRepo.findAll();
+    public List<Experiencia> buscarExperiencias(){
+        return experienciaRepo.findAll();
     }
     
     public Experiencia editarExperiencia(Experiencia experiencia){
@@ -31,5 +32,6 @@ public class ExperienciaService {
     }
     
     public void borrarExperiencia(Long id){
+        experienciaRepo.deleteById(id);
     }
 }
