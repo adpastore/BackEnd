@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
 @Entity
 public class Habilidades {
 
@@ -30,46 +33,4 @@ public class Habilidades {
         this.imagenHab = imagenHab;
         this.porcHab = porcHab;
     }
-
-    public Long getIdHab() {
-        return idHab;
-    }
-
-    public void setIdHab(Long idHab) {
-        this.idHab = idHab;
-    }
-
-    public String getNombreHab() {
-        return nombreHab;
-    }
-
-    public void setNombreHab(String nombreHab) {
-        this.nombreHab = nombreHab;
-    }
-
-    public String getDescHab() {
-        return descHab;
-    }
-
-    public void setDescHab(String descHab) {
-        this.descHab = descHab;
-    }
-
-    public String getImagenHab() {
-        return imagenHab;
-    }
-
-    public void setImagenHab(String imagenHab) {
-        this.imagenHab = imagenHab;
-    }
-
-    public int getPorcHab() {
-        return porcHab;
-    }
-
-    public void setPorcHab(int porcHab) {
-        this.porcHab = porcHab;
-    }
-    
-    
 }

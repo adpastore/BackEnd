@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
 @Entity
 public class Experiencia {
 
@@ -32,53 +35,4 @@ public class Experiencia {
         this.descExp = descExp;
         this.imagenExp = imagenExp;
     }
-
-    public Long getIdExp() {
-        return idExp;
-    }
-
-    public void setIdExp(Long idExp) {
-        this.idExp = idExp;
-    }
-
-    public String getNombreExp() {
-        return nombreExp;
-    }
-
-    public void setNombreExp(String nombreExp) {
-        this.nombreExp = nombreExp;
-    }
-
-    public int getFechaIniExp() {
-        return fechaIniExp;
-    }
-
-    public void setFechaIniExp(int fechaIniExp) {
-        this.fechaIniExp = fechaIniExp;
-    }
-
-    public int getFechaFinExp() {
-        return fechaFinExp;
-    }
-
-    public void setFechaFinExp(int fechaFinExp) {
-        this.fechaFinExp = fechaFinExp;
-    }
-
-    public String getDescExp() {
-        return descExp;
-    }
-
-    public void setDescExp(String descExp) {
-        this.descExp = descExp;
-    }
-
-    public String getImagenExp() {
-        return imagenExp;
-    }
-
-    public void setImagenExp(String imagenExp) {
-        this.imagenExp = imagenExp;
-    }
-
 }
