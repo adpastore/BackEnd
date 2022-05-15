@@ -2,8 +2,10 @@
 
 import com.ap.ap.models.Usuario;
 import com.ap.ap.services.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -13,8 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/usuario")
+
 public class UsuarioController {
-    
+        
     private final UsuarioService usuarioService;
 
     public UsuarioController(UsuarioService usuarioService) {
@@ -28,7 +31,7 @@ public class UsuarioController {
     }
     
     @PutMapping("/editar")
-    public ResponseEntity<Usuario> editarUsuario(@RequestBody Usuario usuario){
+    public ResponseEntity<Usuario> editarUsuario(@RequestBody Usuario usuario)  {
         Usuario updateUsuario=usuarioService.editarUsuario(usuario);
         return new ResponseEntity<>(updateUsuario,HttpStatus.OK);
     }

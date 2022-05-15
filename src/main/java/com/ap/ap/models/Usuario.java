@@ -14,6 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
+
 @Entity
 public class Usuario implements Serializable {
 
