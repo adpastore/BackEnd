@@ -24,12 +24,6 @@ public class EducacionController {
         this.educacionService = educacionService;
     }
     
-    @GetMapping("/id/{id}")
-    public ResponseEntity<Educacion> obtenerEducacion(@PathVariable("id")Long id){
-        Educacion educacion=educacionService.buscaEducacionPorId(id);
-        return new ResponseEntity<>(educacion, HttpStatus.OK);
-    }
-    
       @GetMapping("/all")
     public ResponseEntity<List<Educacion>> obtenerEducacion(){
     List<Educacion> educaciones=educacionService.buscarEducacion();

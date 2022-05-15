@@ -24,12 +24,6 @@ public class ExperienciaController {
         this.experienciaService = experienciaService;
     }
     
-    @GetMapping("/id/{id}")
-    public ResponseEntity<Experiencia> obtenerExperiencia(@PathVariable("id")Long id){
-        Experiencia experiencia=experienciaService.buscaExperienciaPorId(id);
-        return new ResponseEntity<>(experiencia, HttpStatus.OK);
-    }
-    
       @GetMapping("/all")
     public ResponseEntity<List<Experiencia>> obtenerExperiencia(){
     List<Experiencia> experiencia=experienciaService.buscarExperiencias();
