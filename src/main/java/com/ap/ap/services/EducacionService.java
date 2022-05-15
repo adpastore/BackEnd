@@ -1,5 +1,6 @@
 package com.ap.ap.services;
 
+import com.ap.ap.exception.UserNotFoundException;
 import com.ap.ap.models.Educacion;
 import com.ap.ap.repository.EducacionRepo;
 import java.util.List;
@@ -23,7 +24,7 @@ public class EducacionService {
         return educacionRepo.save(educacion);
     }
 
-    public List<Educacion> buscarEducaciones() {
+    public List<Educacion> buscarEducacion() {
         return educacionRepo.findAll();
     }
 
@@ -33,5 +34,9 @@ public class EducacionService {
 
     public void borrarEducacion(Long id) {
         educacionRepo.deleteById(id);
+    }
+
+    public Educacion buscaEducacionPorId(Long id) {
+        return educacionRepo.findById(id).orElseThrow(() -> new UserNotFoundException("Educacion no encontrada"));
     }
 }

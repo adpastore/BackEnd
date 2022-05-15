@@ -1,5 +1,6 @@
 package com.ap.ap.services;
 
+import com.ap.ap.exception.UserNotFoundException;
 import com.ap.ap.models.Habilidades;
 import com.ap.ap.repository.HabilidadesRepo;
 import java.util.List;
@@ -27,12 +28,16 @@ public class HabilidadesService {
         return habilidadesRepo.findAll();
     }
     
-    public Habilidades editarExperiencia(Habilidades habilidades){
+    public Habilidades editarHabilidades(Habilidades habilidades){
         return habilidadesRepo.save(habilidades);
     }
     
-    public void borrarExperiencia(Long id){
+    public void borrarHabilidades(Long id){
         habilidadesRepo.deleteById(id);
+    }
+    
+    public Habilidades buscaHabilidadesPorId(Long id){
+        return habilidadesRepo.findById(id).orElseThrow(()-> new UserNotFoundException("Habilidades no encontrada"));
     }
 }
 

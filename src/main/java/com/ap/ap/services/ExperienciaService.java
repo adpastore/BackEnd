@@ -1,5 +1,6 @@
 package com.ap.ap.services;
 
+import com.ap.ap.exception.UserNotFoundException;
 import com.ap.ap.models.Experiencia;
 import com.ap.ap.repository.ExperienciaRepo;
 import java.util.List;
@@ -33,5 +34,9 @@ public class ExperienciaService {
     
     public void borrarExperiencia(Long id){
         experienciaRepo.deleteById(id);
+    }
+    
+    public Experiencia buscaExperienciaPorId(Long id){
+        return experienciaRepo.findById(id).orElseThrow(()-> new UserNotFoundException("Experiencia no encontrada"));
     }
 }
