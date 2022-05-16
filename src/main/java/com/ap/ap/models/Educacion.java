@@ -22,16 +22,20 @@ public class Educacion {
     private int fechaFinEdu;
     private String descEdu;
     private String imagenEdu;
+    private String sedeEdu;
 
     public Educacion() {
 
     }
 
-    public Educacion(Long idEdu, int fechaIniEdu, int fechaFinEdu, String descEdu, String imagenEdu) {
+    public Educacion(Long idEdu, String tituloEdu, int fechaIniEdu, int fechaFinEdu, String descEdu, String imagenEdu, String sedeEdu) {
         this.idEdu = idEdu;
+        this.tituloEdu = tituloEdu;
         this.fechaIniEdu = fechaIniEdu;
         this.fechaFinEdu = fechaFinEdu;
         this.descEdu = descEdu;
         this.imagenEdu = imagenEdu;
+        this.sedeEdu = sedeEdu;
     }
+
 }
