@@ -32,7 +32,7 @@ public class EducacionService {
         return educacionRepo.save(educacion);
     }
 
-    public void borrarEducacion(Long id) {
+    public void deleteEducacion(Long id) {
         educacionRepo.deleteById(id);
     }
 

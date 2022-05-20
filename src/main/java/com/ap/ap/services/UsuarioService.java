@@ -32,7 +32,7 @@ public class UsuarioService {
     }
 
     //Se declara sólo por tener todo declarado.
-    public void borrarUsuario(Long id) {
+    public void deleteUsuario(Long id) {
         usuarioRepo.deleteById(id());
     }
     

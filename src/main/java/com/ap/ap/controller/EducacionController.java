@@ -24,7 +24,7 @@ public class EducacionController {
         this.educacionService = educacionService;
     }
     
-      @GetMapping("/all")
+    @GetMapping("/all")
     public ResponseEntity<List<Educacion>> obtenerEducacion(){
     List<Educacion> educaciones=educacionService.buscarEducacion();
     return new ResponseEntity<>(educaciones, HttpStatus.OK);
@@ -43,8 +43,8 @@ public class EducacionController {
     }
     
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> borrarEducacion(@PathVariable("id")Long id){
-        educacionService.borrarEducacion(id);
+    public ResponseEntity<?> deleteEducacion(@PathVariable("id")Long id){
+        educacionService.deleteEducacion(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

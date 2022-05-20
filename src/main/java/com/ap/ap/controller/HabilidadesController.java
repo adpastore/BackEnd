@@ -49,8 +49,8 @@ public class HabilidadesController {
     }
     
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> borrarHabilidades(@PathVariable("id")Long id){
-        habilidadesService.borrarHabilidades(id);
+    public ResponseEntity<?> deleteHabilidades(@PathVariable("id")Long id)  {
+        habilidadesService.deleteHabilidades(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

@@ -32,7 +32,7 @@ public class ExperienciaService {
         return experienciaRepo.save(experiencia);
     }
     
-    public void borrarExperiencia(Long id){
+    public void deleteExperiencia(Long id){
         experienciaRepo.deleteById(id);
     }
     

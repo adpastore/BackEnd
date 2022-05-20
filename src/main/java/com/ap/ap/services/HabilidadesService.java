@@ -32,7 +32,7 @@ public class HabilidadesService {
         return habilidadesRepo.save(habilidades);
     }
     
-    public void borrarHabilidades(Long id){
+    public void deleteHabilidades(Long id){
         habilidadesRepo.deleteById(id);
     }
     

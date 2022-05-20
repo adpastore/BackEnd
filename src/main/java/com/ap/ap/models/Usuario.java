@@ -31,7 +31,7 @@ public class Usuario implements Serializable {
     private String acerca;
     private String acercas;
     private String acercas2;
-    private int telefono;
+    private String telefono;
     private String mail;
     private String facebook;
     private String github;
@@ -52,7 +52,7 @@ public class Usuario implements Serializable {
     }
 
     public Usuario(Long id, String nombre, String apellido, String titulo, String fotoPeril, 
-            String acerca, String acercas, String acercas2,int telefono, String mail, String facebook, String github, 
+            String acerca, String acercas, String acercas2,String telefono, String mail, String facebook, String github, 
             String instagram, String imagen) {
         this.id = id;
         this.nombre = nombre;
