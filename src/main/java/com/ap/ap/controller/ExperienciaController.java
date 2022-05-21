@@ -24,7 +24,7 @@ public class ExperienciaController {
         this.experienciaService = experienciaService;
     }
     
-      @GetMapping("/all")
+    @GetMapping("/all")
     public ResponseEntity<List<Experiencia>> obtenerExperiencia(){
     List<Experiencia> experiencia=experienciaService.buscarExperiencias();
     return new ResponseEntity<>(experiencia, HttpStatus.OK);

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/educacion")
 
 public class EducacionController {
-     private final EducacionService educacionService;
+    private final EducacionService educacionService;
 
     public EducacionController(EducacionService educacionService) {
         this.educacionService = educacionService;
