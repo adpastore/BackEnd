@@ -22,17 +22,21 @@ public class Experiencia {
     private int fechaFinExp;
     private String descExp;
     private String imagenExp;
+    private String lugarExp;
+    private String asigExp;
 
     public Experiencia() {
 
     }
 
-    public Experiencia(Long idExp, String nombreExp, int fechaIniExp, int fechaFinExp, String descExp, String imagenExp) {
+    public Experiencia(Long idExp, String nombreExp, int fechaIniExp, int fechaFinExp, String descExp, String imagenExp, String lugarExp, String asigExp) {
         this.idExp = idExp;
         this.nombreExp = nombreExp;
         this.fechaIniExp = fechaIniExp;
         this.fechaFinExp = fechaFinExp;
         this.descExp = descExp;
         this.imagenExp = imagenExp;
+        this.lugarExp = lugarExp;
+        this.asigExp = asigExp;
     }
 }
