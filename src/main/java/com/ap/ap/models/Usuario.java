@@ -61,7 +61,7 @@ public class Usuario implements Serializable {
         this.fotoPeril = fotoPeril;
         this.acerca = acerca;
         this.acercas = acercas;
-        this.acercas2 = acercas;
+        this.acercas2 = acercas2;
         this.telefono = telefono;
         this.mail = mail;
         this.facebook = facebook;
