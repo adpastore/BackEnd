@@ -23,17 +23,11 @@ public class HabilidadesController {
     public HabilidadesController(HabilidadesService habilidadesService) {
         this.habilidadesService = habilidadesService;
     }
-    
-//    @GetMapping("/id/{id}")
-//    public ResponseEntity<Habilidades> obtenerHabilidades(@PathVariable("id")Long id){
-//        Habilidades habilidades=habilidadesService.buscaHabilidadesPorId(id);
-//        return new ResponseEntity<>(habilidades, HttpStatus.OK);
-//    }
-    
+        
       @GetMapping("/all")
     public ResponseEntity<List<Habilidades>> obtenerHabilidades(){
-    List<Habilidades> experiencia=habilidadesService.buscarHabilidades();
-    return new ResponseEntity<>(experiencia, HttpStatus.OK);
+    List<Habilidades> habilidades=habilidadesService.buscarHabilidades();
+    return new ResponseEntity<>(habilidades, HttpStatus.OK);
     }
     
     @PutMapping("/editar")
