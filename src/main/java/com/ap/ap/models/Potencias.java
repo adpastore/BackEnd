@@ -18,7 +18,7 @@ public class Potencias {
     private Long idPot;
 
     @Basic
-    private String potencia;
+    private String potencias;
     private int valor;
 
     public Potencias() {
@@ -26,7 +26,7 @@ public class Potencias {
 
     public Potencias(Long idPot, String potencia, int valor) {
         this.idPot = idPot;
-        this.potencia = potencia;
+        this.potencias = potencia;
         this.valor = valor;
     }
 
