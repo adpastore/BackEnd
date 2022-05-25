@@ -18,13 +18,17 @@ public class Potencias {
     private Long idPot;
 
     @Basic
+    private String potencia;
     private int valor;
 
     public Potencias() {
     }
 
-    public Potencias(Long idPot, int valor) {
+    public Potencias(Long idPot, String potencia, int valor) {
         this.idPot = idPot;
+        this.potencia = potencia;
         this.valor = valor;
     }
+
+   
 }
