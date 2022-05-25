@@ -8,10 +8,11 @@ import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 public class Potencias {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idPot;
@@ -26,6 +27,4 @@ public class Potencias {
         this.idPot = idPot;
         this.valor = valor;
     }
-    
-    
 }
