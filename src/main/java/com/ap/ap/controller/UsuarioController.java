@@ -1,4 +1,4 @@
-    package com.ap.ap.controller;
+package com.ap.ap.controller;
 
 import com.ap.ap.models.Usuario;
 import com.ap.ap.services.UsuarioService;
