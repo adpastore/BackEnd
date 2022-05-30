@@ -39,7 +39,7 @@ public class UsuarioController {
     
     
     @PutMapping("/editar")
-    public ResponseEntity<Usuario> editarUsuario(@RequestBody Usuario usuario)  {
+    public ResponseEntity<Usuario> editarUsuario(@RequestBody Usuario usuario) {
         Usuario updateUsuario=usuarioService.editarUsuario(usuario);
         return new ResponseEntity<>(updateUsuario,HttpStatus.OK);
     }
