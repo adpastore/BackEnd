@@ -1,8 +1,7 @@
-package com.ap.ap.models;
+    package com.ap.ap.models;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,8 +23,11 @@ public class Usuario implements Serializable {
     @Column(nullable = false, updatable = false)
     private Long id;
 
-    @Basic
+    @NotNull
     private String nombre;
+    
+    
+    
     private String apellido;
     private String titulo;
     private String fotoPeril;
