@@ -2,20 +2,20 @@ package com.ap.ap.services;
 
 import com.ap.ap.exception.UserNotFoundException;
 import com.ap.ap.models.Habilidades;
-import com.ap.ap.repository.HabilidadesRepo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.ap.ap.repository.IHabilidadesRepo;
 
 @Service //declaracion del servicio
 @Transactional //union con el controlador y control de metodos
 public class HabilidadesService {
     
-    private final HabilidadesRepo habilidadesRepo;
+    private final IHabilidadesRepo habilidadesRepo;
     
     @Autowired
-    public HabilidadesService(HabilidadesRepo habilidadesRepo)  {
+    public HabilidadesService(IHabilidadesRepo habilidadesRepo)  {
         this.habilidadesRepo = habilidadesRepo;
     }
     

@@ -2,21 +2,21 @@ package com.ap.ap.services;
 
 import com.ap.ap.exception.UserNotFoundException;
 import com.ap.ap.models.Usuario;
-import com.ap.ap.repository.UsuarioRepo;
 import java.util.List;
 import static org.hibernate.criterion.Projections.id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.ap.ap.repository.IUsuarioRepo;
 
 @Service
 @Transactional
 public class UsuarioService {
 
-    private final UsuarioRepo usuarioRepo;
+    private final IUsuarioRepo usuarioRepo;
 
     @Autowired
-    public UsuarioService(UsuarioRepo usuarioRepo) {
+    public UsuarioService(IUsuarioRepo usuarioRepo) {
         this.usuarioRepo = usuarioRepo;
     }
 

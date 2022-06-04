@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 //Se relaciona con models
-public interface EducacionRepo extends JpaRepository<Educacion, Long>{
+public interface IEducacionRepo extends JpaRepository<Educacion, Long>{
 
 }

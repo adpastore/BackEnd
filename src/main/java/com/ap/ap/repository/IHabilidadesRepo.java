@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 //Se relaciona con models
-public interface HabilidadesRepo extends JpaRepository<Habilidades, Long>{
+public interface IHabilidadesRepo extends JpaRepository<Habilidades, Long>{
     
 }

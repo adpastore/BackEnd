@@ -2,20 +2,20 @@ package com.ap.ap.services;
 
 import com.ap.ap.exception.UserNotFoundException;
 import com.ap.ap.models.Educacion;
-import com.ap.ap.repository.EducacionRepo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.ap.ap.repository.IEducacionRepo;
 
 @Service //declaracion del servicio
 @Transactional //union con el controlador y control de metodos
 public class EducacionService {
 
-    private final EducacionRepo educacionRepo;
+    private final IEducacionRepo educacionRepo;
 
     @Autowired
-    public EducacionService(EducacionRepo educacionRepo) {
+    public EducacionService(IEducacionRepo educacionRepo) {
         this.educacionRepo = educacionRepo;
     }
 

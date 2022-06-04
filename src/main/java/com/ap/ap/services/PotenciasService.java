@@ -2,20 +2,20 @@ package com.ap.ap.services;
 
 import com.ap.ap.exception.UserNotFoundException;
 import com.ap.ap.models.Potencias;
-import com.ap.ap.repository.PotenciasRepo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.ap.ap.repository.IPotenciasRepo;
 
 @Service //declaracion del servicio
 @Transactional //union con el controlador y control de metodos
 public class PotenciasService {
     
-    private final PotenciasRepo potenciasRepo;
+    private final IPotenciasRepo potenciasRepo;
     
     @Autowired
-    public PotenciasService(PotenciasRepo potenciasRepo)  {
+    public PotenciasService(IPotenciasRepo potenciasRepo)  {
         this.potenciasRepo = potenciasRepo;
     }
         

@@ -2,20 +2,20 @@ package com.ap.ap.services;
 
 import com.ap.ap.exception.UserNotFoundException;
 import com.ap.ap.models.Experiencia;
-import com.ap.ap.repository.ExperienciaRepo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.ap.ap.repository.IExperienciaRepo;
 
 @Service //declaracion del servicio
 @Transactional //union con el controlador y control de metodos
 public class ExperienciaService {
     
-    private final ExperienciaRepo experienciaRepo;
+    private final IExperienciaRepo experienciaRepo;
     
     @Autowired
-    public ExperienciaService(ExperienciaRepo experienciaRepo){
+    public ExperienciaService(IExperienciaRepo experienciaRepo){
         this.experienciaRepo = experienciaRepo;
     }
     
