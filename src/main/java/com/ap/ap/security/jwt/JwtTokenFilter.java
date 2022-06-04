@@ -43,15 +43,15 @@ public class JwtTokenFilter extends OncePerRequestFilter{
         }
 
     private boolean hasAuthorizationBearer(HttpServletRequest request) {
-        String header = request.getHeader("Autorización");
-        if (ObjectUtils.isEmpty(header) || !header.startsWith("Portador")) {
+        String header = request.getHeader("Authorization");
+        if (ObjectUtils.isEmpty(header) || !header.startsWith("Bearer")) {
             return false;
         }
         return true;
     }
 
     private String getAccessToken(HttpServletRequest request) {
-        String header = request.getHeader("Autorización");
+        String header = request.getHeader("Authorization");
         String token = header.split(" ")[1].trim();
         return token;
     }
@@ -80,4 +80,3 @@ private UserDetails getUserDetails(String token){
     
     }
 }
-        
