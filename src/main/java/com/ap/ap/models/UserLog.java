@@ -31,8 +31,7 @@ public class UserLog implements UserDetails{
     public UserLog() {
     }
 
-    public UserLog(Integer id, String email, String password) {
-        this.id = id;
+    public UserLog(String email, String password) {
         this.email = email;
         this.password = password;
     }

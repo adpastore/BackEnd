@@ -7,5 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface IUserRepo extends JpaRepository<UserLog, Integer>{
     
     Optional<UserLog> findByEmail(String email);
+
+    public Object getById(String username);
     
 }
