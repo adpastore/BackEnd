@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
 @Entity
 public class Experiencia {
 
@@ -19,66 +22,21 @@ public class Experiencia {
     private int fechaFinExp;
     private String descExp;
     private String imagenExp;
+    private String lugarExp;
+    private String asigExp;
 
     public Experiencia() {
 
     }
 
-    public Experiencia(Long idExp, String nombreExp, int fechaIniExp, int fechaFinExp, String descExp, String imagenExp) {
+    public Experiencia(Long idExp, String nombreExp, int fechaIniExp, int fechaFinExp, String descExp, String imagenExp, String lugarExp, String asigExp) {
         this.idExp = idExp;
         this.nombreExp = nombreExp;
         this.fechaIniExp = fechaIniExp;
         this.fechaFinExp = fechaFinExp;
         this.descExp = descExp;
         this.imagenExp = imagenExp;
+        this.lugarExp = lugarExp;
+        this.asigExp = asigExp;
     }
-
-    public Long getIdExp() {
-        return idExp;
-    }
-
-    public void setIdExp(Long idExp) {
-        this.idExp = idExp;
-    }
-
-    public String getNombreExp() {
-        return nombreExp;
-    }
-
-    public void setNombreExp(String nombreExp) {
-        this.nombreExp = nombreExp;
-    }
-
-    public int getFechaIniExp() {
-        return fechaIniExp;
-    }
-
-    public void setFechaIniExp(int fechaIniExp) {
-        this.fechaIniExp = fechaIniExp;
-    }
-
-    public int getFechaFinExp() {
-        return fechaFinExp;
-    }
-
-    public void setFechaFinExp(int fechaFinExp) {
-        this.fechaFinExp = fechaFinExp;
-    }
-
-    public String getDescExp() {
-        return descExp;
-    }
-
-    public void setDescExp(String descExp) {
-        this.descExp = descExp;
-    }
-
-    public String getImagenExp() {
-        return imagenExp;
-    }
-
-    public void setImagenExp(String imagenExp) {
-        this.imagenExp = imagenExp;
-    }
-
 }

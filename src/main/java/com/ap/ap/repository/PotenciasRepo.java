@@ -1,10 +1,9 @@
 package com.ap.ap.repository;
 
-import com.ap.ap.models.Educacion;
+import com.ap.ap.models.Potencias;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-
 //Se relaciona con models
-public interface EducacionRepo extends JpaRepository<Educacion, Long>{
-
+public interface PotenciasRepo  extends JpaRepository<Potencias, Long>{
+    
 }
