@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/potencias")
+@RequestMapping("/api/potencias")
 
 public class PotenciasController {
      private final PotenciasService potenciasService;

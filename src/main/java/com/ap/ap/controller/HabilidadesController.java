@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/habilidades")
+@RequestMapping("/api/habilidades")
 
 public class HabilidadesController {
     private final HabilidadesService habilidadesService;

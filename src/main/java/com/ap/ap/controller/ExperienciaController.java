@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/experiencia")
+@RequestMapping("/api/experiencia")
 
 public class ExperienciaController {
     private final ExperienciaService experienciaService;
