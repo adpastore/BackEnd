@@ -23,7 +23,7 @@ public class ApApplication {
       @Override
       public void addCorsMappings(CorsRegistry registry) {
 
-        registry.addMapping("/**").allowedOrigins("https://adpapfront.web.app");
+        registry.addMapping("/**").allowedOrigins("https://adpapfront.web.app/portfolio");
       }
     };
   }
@@ -31,7 +31,7 @@ public class ApApplication {
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(false);
-		corsConfiguration.setAllowedOrigins(Arrays.asList("https://adpapfront.web.app"));
+		corsConfiguration.setAllowedOrigins(Arrays.asList("https://adpapfront.web.app/portfolio"));
 		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
 				"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
 				"Access-Control-Request-Method", "Access-Control-Request-Headers"));
