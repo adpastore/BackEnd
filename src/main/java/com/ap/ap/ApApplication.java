@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class ApApplication {
@@ -15,9 +17,20 @@ public class ApApplication {
 		SpringApplication.run(ApApplication.class, args);
 	}
         @Bean
+  public WebMvcConfigurer corsConfigurer() {
+    return new WebMvcConfigurer() {
+
+      @Override
+      public void addCorsMappings(CorsRegistry registry) {
+
+        registry.addMapping("/**").allowedOrigins("https://adpapfront.web.app");
+      }
+    };
+  }
+        @Bean
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
-		corsConfiguration.setAllowCredentials(true);
+		corsConfiguration.setAllowCredentials(false);
 		corsConfiguration.setAllowedOrigins(Arrays.asList("https://adpapfront.web.app"));
 		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
 				"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
