@@ -53,13 +53,14 @@ public class AplicationSecurityConfig extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
-                .authorizeRequests().antMatchers("/api/**")
+                .authorizeRequests().antMatchers("/api/**") 
                 .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
                 .httpBasic();
         
+        http.headers().frameOptions().sameOrigin();
         http.addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }
