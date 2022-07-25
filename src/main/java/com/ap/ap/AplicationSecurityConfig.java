@@ -60,6 +60,7 @@ public class AplicationSecurityConfig extends WebSecurityConfigurerAdapter{
                 .and()
                 .httpBasic();
         
+        http.headers().frameOptions().sameOrigin();
         http.addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }
