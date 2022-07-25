@@ -16,6 +16,17 @@ public class ApApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ApApplication.class, args);
 	}
+	        @Bean
+  public WebMvcConfigurer corsConfigurer() {
+    return new WebMvcConfigurer() {
+
+      @Override
+      public void addCorsMappings(CorsRegistry registry) {
+
+        registry.addMapping("/**").allowedOrigins("https://adpapfront.web.app/portfolio");
+      }
+    };
+  }
         @Bean
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
