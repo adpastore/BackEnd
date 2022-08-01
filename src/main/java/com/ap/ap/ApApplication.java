@@ -16,12 +16,22 @@ public class ApApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ApApplication.class, args);
 	}
+	@Bean
+  	public WebMvcConfigurer corsConfigurer() {
+    	return new WebMvcConfigurer() {
 
+      	@Override
+      	public void addCorsMappings(CorsRegistry registry) {
+
+        registry.addMapping("/**").allowedOrigins("https://adpapfront.web.app/portfolio");
+      		}
+    	};
+  	}
         @Bean
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(false);
-		corsConfiguration.setAllowedOrigins(Arrays.asList("https://adpapfront.web.app"));
+		corsConfiguration.setAllowedOrigins(Arrays.asList("https://adpapfront.web.app/portfolio"));
 		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
 				"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
 				"Access-Control-Request-Method", "Access-Control-Request-Headers"));
