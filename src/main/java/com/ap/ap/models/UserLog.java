@@ -7,13 +7,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-@Getter
-@Setter
+
 @Entity
 @Table(name = "users")
 public class UserLog implements UserDetails{
@@ -31,13 +28,11 @@ public class UserLog implements UserDetails{
     public UserLog() {
     }
 
-    public UserLog(Integer id, String email, String password) {
-        this.id = id;
+    public UserLog(String email, String password) {
         this.email = email;
         this.password = password;
     }
 
-    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
@@ -71,6 +66,22 @@ public class UserLog implements UserDetails{
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
 }
