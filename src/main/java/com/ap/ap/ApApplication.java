@@ -23,7 +23,8 @@ public class ApApplication {
       	@Override
       	public void addCorsMappings(CorsRegistry registry) {
 
-        registry.addMapping("/**").allowedOrigins("https://adpapfront.web.app/portfolio");
+        registry.addMapping("/api/**").allowedOrigins("https://adpapfront.web.app/portfolio").allowedMethods("GET", "POST", "PUT", "DELETE").allowedHeaders("*");
+		registry.addMapping("/auth/**").allowedOrigins("https://adpapfront.web.app/portfolio").allowedMethods("GET", "POST", "PUT", "DELETE").allowedHeaders("*");
       		}
     	};
   	}
