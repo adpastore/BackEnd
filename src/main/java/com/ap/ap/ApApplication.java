@@ -7,8 +7,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-//import org.springframework.web.servlet.config.annotation.CorsRegistry;
-//import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 @SpringBootApplication
 public class ApApplication {
@@ -17,17 +18,17 @@ public class ApApplication {
         SpringApplication.run(ApApplication.class, args);
     }
 
-//    @Bean
-//    public WebMvcConfigurer corsConfigurer() {
-//        return new WebMvcConfigurer() {
-//            @Override
-//            public void addCorsMappings(CorsRegistry registry) {
-//
-//                registry.addMapping("/api/**").allowedOrigins("https://adpapfront.web.app/portfolio").allowedMethods("GET", "POST", "PUT", "DELETE").allowedHeaders("*");
-//		registry.addMapping("/auth/**").allowedOrigins("https://adpapfront.web.app/portfolio").allowedMethods("GET", "POST", "PUT", "DELETE").allowedHeaders("*");
-//            }
-//        };
-//    }
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+
+                registry.addMapping("/api/**").allowedOrigins("https://adpapfront.web.app").allowedMethods("GET", "POST", "PUT", "DELETE").allowedHeaders("*");
+		registry.addMapping("/auth/**").allowedOrigins("https://adpapfront.web.app").allowedMethods("GET", "POST", "PUT", "DELETE").allowedHeaders("*");
+            }
+        };
+    }
 
     @Bean
     public CorsFilter corsFilter() {
