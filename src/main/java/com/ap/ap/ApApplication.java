@@ -30,7 +30,8 @@ public class ApApplication {
 //            }
 //        };
 //    }
-
+    
+    
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
