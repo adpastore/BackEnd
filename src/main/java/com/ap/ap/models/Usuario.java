@@ -1,4 +1,4 @@
-    package com.ap.ap.models;
+package com.ap.ap.models;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,7 +13,8 @@ import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 
 @Entity
 public class Usuario implements Serializable {
@@ -25,9 +26,7 @@ public class Usuario implements Serializable {
 
     @NotNull
     private String nombre;
-    
-    
-    
+
     private String apellido;
     private String titulo;
     private String fotoPeril;
@@ -51,11 +50,14 @@ public class Usuario implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idExp")
     private List<Experiencia> experienciaList;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idPot")
+    private List<Potencias> potenciaList;
+
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String apellido, String titulo, String fotoPeril, 
-            String acerca, String acercas, String acercas2,String telefono, String mail, String facebook, String github, 
+    public Usuario(Long id, String nombre, String apellido, String titulo, String fotoPeril,
+            String acerca, String acercas, String acercas2, String telefono, String mail, String facebook, String github,
             String instagram, String imagen) {
         this.id = id;
         this.nombre = nombre;
